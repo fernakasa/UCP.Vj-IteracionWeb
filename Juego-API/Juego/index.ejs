@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <title>Hangman Game</title>
+      <link rel="stylesheet" type="text/css" href="hangman.css">
+   </head>
+   <body>
+      <h1 id="category"></h1>
+      <h2 id="lettercount"></h2>
+      <h3 id="lives"></h3>
+      <h1 id="letterspace"></h1>
+      <div id="hangman-square">
+		<img id="base" class="hidden" src="images/base.png">
+		<img id="stem" class="hidden" src="images/stem.png">
+		<img id="top1" class="hidden" src="images/top1.png">
+		<img id="top2" class="hidden" src="images/top2.png">
+		<img id="head" class="hidden" src="images/head.png">
+		<img id="body" class="hidden" src="images/body.png">
+		<img id="right-arm" class="hidden" src="images/right-arm.png">
+		<img id="left-arm" class="hidden" src="images/left-arm.png">
+		<img id="right-leg" class="hidden" src="images/right-leg.png">
+		<img id="left-leg" class="hidden" src="images/left-leg.png">
+	  </div>
+      <br />
+      <div id="alphabet">
+         <button id="a" class="alphabet-style" type="button" onclick="checkLetter('a');">a</button>
+         <button id="b" class="alphabet-style" type="button" onclick="checkLetter('b');">b</button>
+         <button id="c" class="alphabet-style" type="button" onclick="checkLetter('c');">c</button>
+         <button id="d" class="alphabet-style" type="button" onclick="checkLetter('d');">d</button>
+         <button id="e" class="alphabet-style" type="button" onclick="checkLetter('e');">e</button>
+         <button id="f" class="alphabet-style" type="button" onclick="checkLetter('f');">f</button>
+         <button id="g" class="alphabet-style" type="button" onclick="checkLetter('g');">g</button>
+         <button id="h" class="alphabet-style" type="button" onclick="checkLetter('h');">h</button>
+         <button id="i" class="alphabet-style" type="button" onclick="checkLetter('i');">i</button>
+         <button id="j" class="alphabet-style" type="button" onclick="checkLetter('j');">j</button>
+         <button id="k" class="alphabet-style" type="button" onclick="checkLetter('k');">k</button>
+         <button id="l" class="alphabet-style" type="button" onclick="checkLetter('l');">l</button>
+         <button id="m" class="alphabet-style" type="button" onclick="checkLetter('m');">m</button>
+         <br /><br />
+         <button id="n" class="alphabet-style" type="button" onclick="checkLetter('n');">n</button>
+         <button id="o" class="alphabet-style" type="button" onclick="checkLetter('o');">o</button>
+         <button id="p" class="alphabet-style" type="button" onclick="checkLetter('p');">p</button>
+         <button id="q" class="alphabet-style" type="button" onclick="checkLetter('q');">q</button>
+         <button id="r" class="alphabet-style" type="button" onclick="checkLetter('r');">r</button>
+         <button id="s" class="alphabet-style" type="button" onclick="checkLetter('s');">s</button>
+         <button id="t" class="alphabet-style" type="button" onclick="checkLetter('t');">t</button>
+         <button id="u" class="alphabet-style" type="button" onclick="checkLetter('u');">u</button>
+         <button id="v" class="alphabet-style" type="button" onclick="checkLetter('v');">v</button>
+         <button id="w" class="alphabet-style" type="button" onclick="checkLetter('w');">w</button>
+         <button id="x" class="alphabet-style" type="button" onclick="checkLetter('x');">x</button>
+         <button id="y" class="alphabet-style" type="button" onclick="checkLetter('y');">y</button>
+         <button id="z" class="alphabet-style" type="button" onclick="checkLetter('z');">z</button>
+      </div>
+      <br />
+		<div class="modal">
+			<div class="modal-content">
+				<span class="close-button">&times;</span>
+				<h1 id="modal-text"></h1>
+				<h4 id="modal-hint"><h4>
+			</div>
+		</div>
+      <button id="hint" class="hint-style" type="button" onclick="showHint();">hint</button>
+      <button id="new-game" type="button" onclick="newGame();">play again</button>
+      <script src="hangman.js"></script>
+   </body>
+</html>

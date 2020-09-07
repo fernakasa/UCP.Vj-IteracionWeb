@@ -1,0 +1,241 @@
+body {
+     font-family: 'Open Sans', sans-serif;
+     font-weight: 300;
+     line-height: 1.42em;
+     color: #A7A1AE;
+     background-color: #1F2739;
+     text-align: center;
+}
+ h1 {
+     font-size: 3em;
+     font-weight: 300;
+     line-height: 1em;
+     text-align: center;
+     color: #4DC3FA;
+}
+ h3 {
+     font-size: 1em;
+     font-weight: 300;
+     text-align: center;
+     display: block;
+     line-height: 1em;
+     color: #FB667A;
+}
+ h4 {
+     text-align: center;
+}
+ #letterspace {
+     letter-spacing: 0.2em;
+     color: white;
+}
+ #hangman-square {
+     margin: auto;
+     height: 300px;
+     width: 350px;
+     background-color: #CCCCCC;
+     box-shadow: inset 0 0 0 7px rgba(255, 255, 255, 0.5);
+}
+ #hangman-square > img {
+     position: relative;
+}
+.hidden {
+	visibility: hidden;
+}
+ #base {
+     top: 40px;
+     left: -20px;
+}
+ #stem {
+     top: 20px;
+     left: -160px;
+}
+ #top1 {
+     top: -290px;
+     left: 113px;
+}
+ #top2 {
+     top: -260px;
+     left: 97px;
+}
+ #head {
+     top: -205px;
+     left: 55px;
+}
+ #body {
+     top: -142px;
+     left: 20px;
+}
+ #right-arm {
+     top: -175px;
+     left: 5px;
+}
+ #left-arm {
+     top: -160px;
+     left: -80px;
+}
+ #right-leg {
+     top: -110px;
+     left: -85px;
+}
+ #left-leg {
+     top: -151px;
+     left: 25px;
+}
+ .alphabet-style {
+     box-shadow: 0px 10px 14px -7px #897A68;
+     background: linear-gradient(to bottom, #e6dbc9 5%, #e6dbc9 100%);
+     background-color: #5b8a3c;
+     border-radius: 4px;
+     border: 1px solid #897A68;
+     display: inline-block;
+     cursor: pointer;
+     color: black;
+     font-family: Arial;
+     font-size: 13px;
+     font-weight: bold;
+     padding: 6px 12px;
+     text-decoration: none;
+     text-shadow: 0px 1px 0px #5b8a3c;
+}
+ .alphabet-style:hover {
+     background: linear-gradient(to bottom, #8cbcd0 5%, #8cbcd0 100%);
+     background-color: #72b352;
+}
+ .alphabet-style:active {
+     position: relative;
+     top: 1px;
+}
+ .disabledRight {
+     box-shadow: 0px 10px 14px -7px #897A68;
+     background: #8cbcd0;
+     background-color: #8cbcd0;
+     border-radius: 4px;
+     border: 1px solid #897A68;
+     display: inline-block;
+     cursor: pointer;
+     color: black;
+     font-family: Arial;
+     font-size: 13px;
+     font-weight: bold;
+     padding: 6px 12px;
+     text-decoration: none;
+     text-shadow: 0px 1px 0px #897A68;
+}
+ .disabledWrong {
+     box-shadow: 0px 10px 14px -7px #897A68;
+     background: #9BA6A9;
+     background-color: #9BA6A9;
+     border-radius: 4px;
+     border: 1px solid #897A68;
+     display: inline-block;
+     cursor: pointer;
+     color: black;
+     font-family: Arial;
+     font-size: 13px;
+     font-weight: bold;
+     padding: 6px 12px;
+     text-decoration: none;
+     text-shadow: 0px 1px 0px #897A68;
+}
+ .disabledHint {
+     background: #9BA6A9;
+     background-color: #9BA6A9;
+     border-radius: 3px;
+     border: 1px solid #897A68;
+     display: inline-block;
+     cursor: pointer;
+     color: black;
+     font-family: Arial;
+     font-size: 15px;
+     padding: 9px 23px;
+     text-decoration: none;
+     text-shadow: 0px 1px 0px #897A68;
+}
+ .hint-style {
+     background: linear-gradient(to bottom, #e6dbc9 5%, #e6dbc9 100%);
+     background-color: #2dabf9;
+     border-radius: 3px;
+     border: 1px solid #897A68;
+     display: inline-block;
+     cursor: pointer;
+     color: black;
+     font-family: Arial;
+     font-size: 15px;
+     padding: 9px 23px;
+     text-decoration: none;
+     text-shadow: 0px 1px 0px #897A68;
+	 margin-right: 2px;
+}
+ .hint-style:hover {
+     background: linear-gradient(to bottom, #8cbcd0 5%, #8cbcd0 100%);
+     background-color: #0688fa;
+}
+ .hint-style:active {
+     position: relative;
+     top: 1px;
+}
+ #new-game {
+     background: linear-gradient(to bottom, #e6dbc9 5%, #e6dbc9 100%);
+     background-color: #2dabf9;
+     border-radius: 3px;
+     border: 1px solid #897A68;
+     display: inline-block;
+     cursor: pointer;
+     color: black;
+     font-family: Arial;
+     font-size: 15px;
+     padding: 9px 23px;
+     text-decoration: none;
+     text-shadow: 0px 1px 0px #897A68;
+}
+ #new-game:hover {
+     background: linear-gradient(to bottom, #8cbcd0 5%, #8cbcd0 100%);
+     background-color: #0688fa;
+}
+ #new-game:active {
+     position: relative;
+     top: 1px;
+}
+
+.modal {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	opacity: 0;
+	visibility: hidden;
+	transform: scaleX(1.1) scaleY(1.1);
+	transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+	font-family: sans-serif;
+}
+.modal-content {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: white;
+	padding: 1rem 1.5rem;
+	width: 24rem;
+	border-radius: 0.5rem;
+}
+.close-button {
+	float: right;
+	width: 1.5rem;
+	line-height: 1.5rem;
+	text-align: center;
+	cursor: pointer;
+	border-radius: 0.25rem;
+	background-color: lightgray;
+}
+.close-button:hover {
+	background-color: darkgray;
+}
+.show-modal {
+	opacity: 1;
+	visibility: visible;
+	transform: scaleX(1.0) scaleY(1.0);
+	transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+ 
