@@ -1,6 +1,6 @@
 const express = require('express');
 const path = require('path');
-const app = express2();
+const app = express();
 
 //config
 app.set('port', 3000);
