@@ -27,6 +27,6 @@ jobs:
     - name: npm CI
       working-directory: ./Juego-API
       run: npm ci
-    - name: npm build
+    - name: npm start
       working-directory: ./Juego-API
-      run: npm run build
+      run: npm run start
