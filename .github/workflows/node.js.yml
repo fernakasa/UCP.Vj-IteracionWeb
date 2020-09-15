@@ -24,7 +24,10 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: npm ci
-    - working-directory: ./Juego-API
-    - run: npm run build --if-present
+    - name: npm CI
+      working-directory: ./Juego-API
+      run: npm ci
+    - name: npm build
+      working-directory: ./Juego-API
+      run: npm run build
     - run: npm test
