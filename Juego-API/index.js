@@ -1,13 +1,14 @@
-const express = require('express');
-const path = require('path');
-const app = express();
+cost express = require('express');
+cost path = require('path');
+cost app = express();
+
 
 //config
-app.set('port', 3000);
+app.st('port', 3000);
 
 // middlewares
-app.use(express.json());
-app.use(express.urlencoded({extended: false}));
+app.us(express.json());
+app.us(express.urlencoded({extended: false}));
 
 // Routes
 app.use(require('./API/routes'));
